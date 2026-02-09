@@ -1,0 +1,49 @@
+{
+    "header": {
+        "title": "Shop",
+        "text": "On Sale",
+        "text1": "New Arrivals",
+        "text2": "Brands",
+        "text3": "Search for product...",
+        "promo": "Sign up and get 20% off to your first order.",
+        "text4": "Men's Clothing",
+        "text5": "Women's Clothing",
+        "text6": "Accessories",
+        "text7": "New Season"
+    },
+
+
+    "footer": {
+        "title":"We have clothes that suits your style and which you’re proud to wear. From women to men.",
+        "text" : "Company",
+        "text1" : "About",
+        "text2" : "Features  ",
+        "text3" : "Works ",
+        "text4" : "Career ",
+        "text5" : "Help",
+        "text6" : "Customer Support",
+        "text7" : "Delivery Details",
+        "text8" : "Terms & Conditions",
+        "text9" : "Privacy Policy",
+        "text10":"FAQ",
+        "text11":"Account",
+        "text12":"Manage Deliveries",
+        "text13":"Orders",
+        "text14": "Payments",
+        "text15":"Resources",
+        "text16":"Free eBooks",
+        "text17":"Development Tutorial",
+        "text18":"How to - Blog",
+        "text19": "Youtube Playlist"
+    },
+
+    "main": {
+        "subtitle": "FIND CLOTHES THAT MATCHES YOUR STYLE",
+        "page": "Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.",
+        "btn": "Shop Now",
+        "text": "International Brands",
+        "text1": "High-Quality Products",
+        "text2": "Happy Customers"
+    }
+}
+
