@@ -1,23 +1,19 @@
-import React, { useState } from 'react'; // useState qo'shildi
-import { Outlet } from 'react-router-dom';
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
+// Layout.jsx
+import { Outlet } from "react-router-dom";
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
+import Wrapper from "../Wrapper/Wrapper";
 
-const Layout = () => {
-  // Burger menyu holatini shu yerda saqlaymiz
-  const [isOpen, setIsOpen] = useState(false);
-
+const Layout = ({ cartCount }) => { // 1. App dan cartCount ni oladi
   return (
-    <div className="min-h-screen flex flex-col">
-        <Header 
-          isOpen={isOpen} 
-          onMenuClick={() => setIsOpen(!isOpen)} 
-        />
-        <main className="flex-grow">
-          <Outlet /> {/* Sahifalar shu yerda almashadi */}
-        </main>
-        <Footer/>
-    </div>
+    <>
+      <Header cartCount={cartCount} /> {/* 2. Headerga uzatadi */}
+      <main>
+        <Outlet />
+      </main>
+      <Wrapper/>
+      <Footer />
+    </>
   );
 };
 

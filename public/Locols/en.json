@@ -44,6 +44,65 @@
         "text": "International Brands",
         "text1": "High-Quality Products",
         "text2": "Happy Customers"
+    },
+
+    "article":{
+        "subtitle": "NEW ARRIVALS",
+        "text": "T-SHIRT WITH TAPE DETAILS",
+        "text1": "SKINNY FIT JEANS",
+        "text2": "CHECKERED SHIRT",
+        "text3": "SLEEVE STRIPED T-SHIRT",
+        "btn": "View All"
+    },
+    "aside":{
+        "subtitle": "top selling",
+        "text": "VERTICAL STRIPED SHIRT",
+        "text1": "COURAGE GRAPHIC T-SHIRT",
+        "text2": "LOOSE FIT BERMUDA SHORTS",
+        "text3": "FADED SKINNY JEANS",
+        "btn": "View All"
+    },
+
+    "silder": {
+        "subtitle": "BROWSE BY dress STYLE",
+        "text": "Casual",
+        "text1": "Formal",
+        "text2": "Party",
+        "text3": "Gym"
+    },
+    
+
+    "section": {
+        "subtitle": "OUR HAPPY CUSTOMERS",
+        "text": "Sarah M.",
+        "text1": "Alex K.",
+        "text2": "James L.",
+        "text3": "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.",
+        "text4": "Finding clothes that align with my personal style used to be a challenge until I discovered Shop.co. The range of options they offer is truly remarkable, catering to a variety of tastes and occasions.",
+        "text5": "As someone who's always on the lookout for unique fashion pieces, I'm thrilled to have stumbled upon Shop.co. The selection of clothes is not only diverse but also on-point with the latest trends.”",
+        "text6": "Mooen",
+        "text7": "As someone who's always on the lookout for unique fashion pieces, I'm thrilled to have stumbled upon Shop.co. The selection of clothes is not only diverse but also on-point with the latest trends.”"
+    
+    },
+
+
+    "wrapper": {
+        "subtitle": "STAY UPTO DATE ABOUT OUR LATEST OFFERS",
+        "text": "Subscribe to Newsletter",
+        "btn": "Subscribe to Newsletter"
+    },
+
+
+     "mens": {
+        "subtitle": "One Life Graphic T-shirt",
+        "text": "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+        "text1": "Select Colors",
+        "text2": "Choose Size",
+        "text3": "Add to Cart"
     }
+    
+
+
+
 }
 

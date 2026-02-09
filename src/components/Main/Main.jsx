@@ -6,7 +6,6 @@ import { useTranslation } from 'react-i18next';
 import { BsStarFill } from "react-icons/bs";
 import { motion } from 'framer-motion';
 import CountUp from 'react-countup';
-
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade, Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
@@ -28,14 +27,23 @@ const Main = () => {
         visible: { opacity: 1, y: 0, transition: { duration: 0.8 } }
     };
 
+    
+    const brands = [
+        { name: "VERSACE", style: "font-serif font-extrabold tracking-[0.2em]" },
+        { name: "ZARA", style: "font-sans font-bold tracking-[-0.1em] text-4xl" },
+        { name: "GUCCI", style: "font-serif tracking-[0.3em] font-medium" },
+        { name: "PRADA", style: "font-sans font-semibold tracking-[0.15em]" },
+        { name: "Calvin Klein", style: "font-sans font-light tracking-[0.25em] uppercase" }
+    ];
+
     return (
         <>
             <section className="relative w-full overflow-hidden">
                 <Swiper
-                    modules={[Autoplay, EffectFade, Navigation, Pagination]}
+                    modules={[Autoplay, EffectFade, Navigation]}
                     effect={'fade'}
                     autoplay={{ delay: 5000, disableOnInteraction: false }}
-                    pagination={{ clickable: true }}
+                    pagination={{ clickable: false }}
                     loop={true}
                     className="h-[600px] md:h-[700px] w-full"
                 >
@@ -49,9 +57,7 @@ const Main = () => {
                                     backgroundPosition: 'center'
                                 }}
                             >
-                                {/* --- QORA FON (OVERLAY) --- */}
                                 <div className="absolute inset-0 bg-black/40 md:bg-black/30"></div>
-
                                 <div className="container mx-auto px-4 z-10">
                                     <motion.div 
                                         initial="hidden"
@@ -67,7 +73,6 @@ const Main = () => {
                                             <BsStarFill className="text-[50px] text-white/50" />
                                         </motion.div>
 
-                                        {/* Matnlar oq rangda bo'ldi */}
                                         <motion.h1 
                                             variants={fadeInUp}
                                             className="text-[38px] md:text-[58px] lg:text-[72px] font-[1000] leading-[1.1] text-white mb-6 uppercase italic drop-shadow-lg"
@@ -85,33 +90,24 @@ const Main = () => {
                                         <motion.button 
                                             variants={fadeInUp}
                                             whileHover={{ scale: 1.05 }}
-                                            whileTap={{ scale: 0.95 }}
                                             className="px-12 py-4 bg-white text-black rounded-full text-lg font-bold hover:bg-gray-200 transition-all mb-12 shadow-xl"
                                         >
                                             {t("main.btn")}
                                         </motion.button>
 
-                                        {/* Statistikalar */}
                                         <div className="flex justify-center lg:justify-start gap-6 md:gap-10 text-white">
                                             <div className="text-center lg:text-left">
                                                 <h2 className="text-3xl md:text-4xl font-bold italic tracking-tighter">
                                                     <CountUp end={200} suffix="+" enableScrollSpy />
                                                 </h2>
-                                                <p className="text-[10px] md:text-xs text-white/60 uppercase tracking-widest">{t("main.text")}</p>
+                                                <p className="text-[10px] md:text-xs text-white/60 uppercase">{t("main.text")}</p>
                                             </div>
                                             <div className="w-[1px] h-12 bg-white/20"></div>
                                             <div className="text-center lg:text-left">
                                                 <h2 className="text-3xl md:text-4xl font-bold italic tracking-tighter">
                                                     <CountUp end={2000} separator="." suffix="+" enableScrollSpy />
                                                 </h2>
-                                                <p className="text-[10px] md:text-xs text-white/60 uppercase tracking-widest">{t("main.text1")}</p>
-                                            </div>
-                                            <div className="w-[1px] h-12 bg-white/20 hidden md:block"></div>
-                                            <div className="hidden md:block text-center lg:text-left">
-                                                <h2 className="text-3xl md:text-4xl font-bold italic tracking-tighter">
-                                                    <CountUp end={30000} separator="." suffix="+" enableScrollSpy />
-                                                </h2>
-                                                <p className="text-[10px] md:text-xs text-white/60 uppercase tracking-widest">{t("main.text2")}</p>
+                                                <p className="text-[10px] md:text-xs text-white/60 uppercase">{t("main.text1")}</p>
                                             </div>
                                         </div>
                                     </motion.div>
@@ -122,15 +118,31 @@ const Main = () => {
                 </Swiper>
             </section>
 
-            {/* Brendlar paneli */}
-            <div className="bg-white py-12 border-y border-black/5">
-                <div className="container mx-auto px-4 flex flex-wrap justify-center md:justify-between items-center gap-10 opacity-90">
-                   <span className="text-black text-3xl md:text-4xl font-black italic tracking-tighter hover:scale-110 transition-transform cursor-pointer">VERSACE</span>
-                   <span className="text-black text-3xl md:text-4xl font-black italic tracking-tighter hover:scale-110 transition-transform cursor-pointer">ZARA</span>
-                   <span className="text-black text-3xl md:text-4xl font-black italic tracking-tighter hover:scale-110 transition-transform cursor-pointer">GUCCI</span>
-                   <span className="text-black text-3xl md:text-4xl font-black italic tracking-tighter hover:scale-110 transition-transform cursor-pointer">PRADA</span>
-                   <span className="text-black text-3xl md:text-4xl font-black italic tracking-tighter hover:scale-110 transition-transform cursor-pointer">Calvin Klein</span>
-                </div>
+        
+            <div className="bg-black py-12 relative overflow-hidden border-y border-white/10">
+               
+                <div className="absolute inset-y-0 left-0 w-20 md:w-40 bg-gradient-to-r from-black to-transparent z-10"></div>
+                <div className="absolute inset-y-0 right-0 w-20 md:w-40 bg-gradient-to-l from-black to-transparent z-10"></div>
+
+                <motion.div 
+                    className="flex whitespace-nowrap gap-16 md:gap-24 items-center"
+                    animate={{ x: [0, -1500] }}
+                    transition={{ 
+                        repeat: Infinity, 
+                        duration: 25, 
+                        ease: "linear" 
+                    }}
+                >
+                   
+                    {[...brands, ...brands, ...brands].map((brand, index) => (
+                        <span 
+                            key={index}
+                            className={`text-white/80 hover:text-white transition-colors cursor-pointer text-3xl md:text-4xl ${brand.style}`}
+                        >
+                            {brand.name}
+                        </span>
+                    ))}
+                </motion.div>
             </div>
         </>
     );

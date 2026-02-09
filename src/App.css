@@ -7,3 +7,7 @@
     margin: 0 auto;
     padding: 10px;
 }
+
+.brand-gradient {
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}

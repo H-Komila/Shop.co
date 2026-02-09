@@ -43,7 +43,54 @@
     "text": "Xalqaro brendlar",
     "text1": "Yuoqori sifatli mahsulotlar",
     "text2": "Baxtli mijozlar"
+},
+"article": {
+    "subtitle": "YANGI KELGANLAR",
+    "text": "LENTA DETALLI FUTBOLKA",
+    "text1": "TOR BICHIMLI JINSI SHIM",
+    "text2": "KATAKLI KO‘YLAK",
+    "text3": "YO‘L-YO‘L YENGILLI FUTBOLKA",
+    "btn": "Barchasini ko‘rish"
+
+},
+  "silder": {
+    "subtitle": "KIYIM USLUBI BO‘YICHA TANLANG",
+    "text": "Kundalik",
+    "text1": "Rasmiy",
+    "text2": "Bayramona",
+    "text3": "Sport"
+},
+
+"section": {
+    "subtitle": "MAMNUN MIJOZLARIMIZ",
+    "text": "Sarah M.",
+    "text1": "Alex K.",
+    "text2": "James L.",
+    "text3": "Shop.co’dan olgan kiyimlarim sifati va uslubidan hayratdaman. Kundalik kiyimlardan tortib nafis ko‘ylaklargacha — har bir xaridim kutganimdan ham a’lo bo‘ldi.",
+    "text4": "Shaxsiy uslubimga mos kiyim topish avvallari qiyin edi, lekin Shop.co’ni kashf etgach hammasi o‘zgardi. Ular taklif qilayotgan assortiment haqiqatan ham ajoyib va turli did hamda vaziyatlarga mos.",
+    "text5": "Doim o‘ziga xos moda buyumlarini izlaydigan inson sifatida Shop.co’ni topganimdan juda xursandman. Kiyimlar tanlovi nafaqat rang-barang, balki eng so‘nggi trendlar bilan hamohang.",
+    "text6": "Mooen",
+    "text7": "Doim o‘ziga xos moda buyumlarini izlaydigan inson sifatida Shop.co’ni topganimdan juda xursandman. Kiyimlar tanlovi nafaqat rang-barang, balki eng so‘nggi trendlar bilan hamohang."
+},
+
+"wrapper": {
+    "subtitle": "ENG SO‘NGGI TAKLIFLARIMIZDAN XABARDOR BO‘LING",
+    "text": "Yangiliklarga obuna bo‘lish",
+    "btn": "Yangiliklarga obuna bo‘lish"
+},
+
+"mens": {
+    "subtitle": "One Life grafikli futbolka",
+    "text": "Ushbu grafikli futbolka har qanday vaziyat uchun mukammal tanlov. Yumshoq va nafas oluvchi matodan tikilgan bo‘lib, yuqori darajadagi qulaylik va uslubni taqdim etadi.",
+    "text1": "Rangni tanlang",
+    "text2": "O‘lchamni tanlang",
+    "text3": "Savatchaga qo‘shish"
 }
+
+
+
+
+
 
 
 
