@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { MdOutlineStarRate } from "react-icons/md";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { useNavigate } from 'react-router-dom'; // Qo'shildi
+import { useNavigate } from 'react-router-dom';
 import 'swiper/css';
 import Rasm1 from "./images/rasm1.png";
 import Rasm2 from "./images/rasm2.png";
@@ -32,7 +32,7 @@ const ProductRating = ({ initialRate = 4.5 }) => {
 };
 
 const ProductCard = ({ item, t }) => {
-    const navigate = useNavigate(); // Hook chaqirildi
+    const navigate = useNavigate();
 
     return (
         <motion.div
@@ -40,8 +40,8 @@ const ProductCard = ({ item, t }) => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             whileHover={{ y: -10 }}
-            onClick={() => navigate(`/product/${item.id}`)} // ID orqali sahifaga o'tish
-            className="group cursor-pointer h-full"
+            onClick={() => navigate(`/product/${item.id}`)}
+            className="group cursor-pointer h-full pb-4"
         >
             <div className="relative aspect-[3/4] bg-[#F0EEED] rounded-[20px] md:rounded-[32px] overflow-hidden mb-4">
                 <img 
@@ -69,7 +69,6 @@ const ProductCard = ({ item, t }) => {
 
 const Article = () => {
     const { t } = useTranslation();
-    const [showAll, setShowAll] = useState(false);
 
     const allProducts = [
         { id: 1, img: Rasm1, price: 120, oldPrice: null, discount: null, name: "T-shirt with Tape Details" },
@@ -78,16 +77,31 @@ const Article = () => {
         { id: 4, img: Rasm4, price: 130, oldPrice: 160, discount: "-30%", name: "Sleeve Striped T-shirt" },
     ];
 
-    const visibleProducts = showAll ? allProducts : allProducts.slice(0, 4);
-
     return (
         <section className="py-16 md:py-20 bg-white overflow-hidden">
             <div className="container mx-auto px-4">
                 <motion.h1 className="text-[32px] md:text-[50px] text-center mb-12 text-black font-black uppercase italic tracking-tighter">
                     {t("article.subtitle")}
                 </motion.h1>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                    {visibleProducts.map((item) => (
+
+                {/* Mobil versiya uchun slayder (md:hidden) */}
+                <div className="block md:hidden">
+                    <Swiper
+                        spaceBetween={16}
+                        slidesPerView={1.8}
+                        centeredSlides={false}
+                    >
+                        {allProducts.map((item) => (
+                            <SwiperSlide key={item.id}>
+                                <ProductCard item={item} t={t} />
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                </div>
+
+                {/* Kompyuter versiya uchun Grid (hidden md:grid) */}
+                <div className="hidden md:grid grid-cols-4 gap-8">
+                    {allProducts.map((item) => (
                         <ProductCard key={item.id} item={item} t={t} />
                     ))}
                 </div>
